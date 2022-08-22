@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: recipes
+
+server:
+  port: 8080
+
+springdoc:
+  packagesToScan: "com.dish.recipes"
+  pathsToMatch: "/**"

@@ -1,0 +1,23 @@
+version: '3.1'
+services:
+  recipes:
+    build: .
+    container_name: recipes
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=geronimo
+      - POSTGRES_DB=recipes
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
