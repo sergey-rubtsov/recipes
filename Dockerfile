@@ -12,5 +12,6 @@ RUN mkdir /app
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/recipes.jar
 
 ENV SERVER_PORT 8080
+ENV SPRING_PROFILES_ACTIVE prod
 
 CMD ["/bin/sh", "-c", "java $JAVA_OPTS -jar /app/recipes.jar"]

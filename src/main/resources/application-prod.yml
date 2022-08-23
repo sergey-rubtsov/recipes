@@ -7,11 +7,12 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
-        show_sql: false
-        format_sql: false
+        show_sql: true
+        format_sql: true
   flyway:
+    enabled: true
     schemas: recipes
     locations: classpath:db

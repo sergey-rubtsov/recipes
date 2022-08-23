@@ -15,8 +15,8 @@ The REST API has all generated documentation available on the local url: http://
 ## How to run with local DB
 
 Import project as Gradle project.
+This profile is default for local environment.
 To run application with local in-memory H2 DB using IDE the **"local"** profile must be explicitly set as environment 
-variable spring.profiles.active=local
 For tests, the application can be run using a local in-memory H2 DB as datasource:
 
 ```bash
@@ -25,9 +25,10 @@ For tests, the application can be run using a local in-memory H2 DB as datasourc
 
 For production the Postgres DB is required.
 The profile **"prod"** contains configuration for local Postgres DB.
-This profile is default.
 Setting URL and credentials are in the file **application-prod.yml**
-To use this profile run:
+To run application with preconfigured Postgres DB using IDE the **"prod"** profile must be explicitly set as environment
+variable spring.profiles.active=local
+Or run gradle with argument:
 
 ```bash
 ./gradlew bootRun --args='--spring.profiles.active=prod'

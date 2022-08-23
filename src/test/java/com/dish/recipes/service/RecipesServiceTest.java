@@ -124,8 +124,7 @@ class RecipesServiceTest {
                 null,
                 null,
                 null,
-                null
-);
+                null);
         assertEquals(1, found.stream().count());
         found = recipesService.searchRecipes(
                 0,

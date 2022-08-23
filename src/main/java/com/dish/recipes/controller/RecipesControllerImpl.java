@@ -43,7 +43,7 @@ public class RecipesControllerImpl implements RecipesController {
     @Override
     public ResponseEntity<RecipeMessage> updateRecipe(RecipeMessage recipeMessage) {
         return ResponseEntity.ok(recipesMapper.toMessage(
-                recipesService.createRecipe(recipesMapper.toEntity(recipeMessage))));
+                recipesService.updateRecipe(recipesMapper.toEntity(recipeMessage))));
     }
 
     @Override
