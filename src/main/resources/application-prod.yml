@@ -12,3 +12,6 @@ spring:
       hibernate:
         show_sql: false
         format_sql: false
+  flyway:
+    schemas: recipes
+    locations: classpath:db

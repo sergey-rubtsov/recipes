@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.dish'
-version = '0.0.1-SNAPSHOT'
+version = ''
 sourceCompatibility = '11'
 
 configurations {
@@ -35,6 +35,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'org.postgresql:postgresql'
+    runtimeOnly 'org.flywaydb:flyway-core:9.1.6'
     annotationProcessor 'org.projectlombok:lombok'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

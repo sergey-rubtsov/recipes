@@ -44,4 +44,4 @@ docker-compose up -d
 
 ## Tests
 
-Integration and unit tests are implemented for testing. Code coverage is 98%
+Integration and unit tests implemented for testing.
