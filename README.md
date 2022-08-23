@@ -12,19 +12,21 @@ Users are able to filter available recipes based on one or more of the following
 The application is implemented on Java 11 according to REST architecture and uses Spring Boot framework version 2.7.3.
 The REST API has all generated documentation available on the local url: http://localhost:8080/swagger-ui/index.html
 
-## How to run
+## How to run with local DB
 
 Import project as Gradle project.
-For tests, the application can be run using a local in memory H2 DB as datasource:
+To run application with local in-memory H2 DB using IDE the **"local"** profile must be explicitly set as environment 
+variable spring.profiles.active=local
+For tests, the application can be run using a local in-memory H2 DB as datasource:
 
 ```bash
 ./gradlew bootRun --args='--spring.profiles.active=local'
 ```
 
-For production the database is required. 
-The profile "prod" contains configuration for local Postgres DB.
-To use this configuration, you must have an available database.
-The local setup steps are described below.
+For production the Postgres DB is required.
+The profile **"prod"** contains configuration for local Postgres DB.
+This profile is default.
+Setting URL and credentials are in the file **application-prod.yml**
 To use this profile run:
 
 ```bash
@@ -32,6 +34,13 @@ To use this profile run:
 ```
 
 ## Docker configuration
+
+Docker must be preinstalled to use this configuration.
+To run application with Postgres DB in Docker:
+
+```bash
+docker-compose up -d
+```
 
 ## Tests
 

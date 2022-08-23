@@ -1,6 +1,8 @@
 spring:
   application:
     name: recipes
+  profiles:
+    active: prod
 
 server:
   port: 8080
