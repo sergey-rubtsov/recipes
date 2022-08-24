@@ -10,7 +10,7 @@ Users are able to filter available recipes based on one or more of the following
 5. Text search for a specific word in an instruction.
 
 The application is implemented on Java 11 according to REST architecture and uses Spring Boot framework version 2.7.3.
-The REST API has all generated documentation available on the local url: http://localhost:8080/swagger-ui/index.html
+The REST API has all generated documentation available on the [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 ## How to run with local DB
 
@@ -43,6 +43,14 @@ To run application with Postgres DB in Docker:
 docker-compose up -d
 ```
 
+## Some assumptions and restrictions.
+The ingredient name and recipe title are used as a unique case-sensitive identifier.
+There is no special table for the numerical measure of ingredients, so the quantity of ingredients 
+must be written either in the instructions or in the name of the ingredient.
+There are only two categories of ingredients: vegetarian (VEGETARIAN) and non-vegetarian (named as MEAT).
+
+
 ## Tests
 
 Integration and unit tests implemented for testing.
+Test coverage 100% classes.
